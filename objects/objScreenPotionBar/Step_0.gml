@@ -24,10 +24,6 @@ if(state == "select"){
 		if(pc.xMouse == 0 && pc.yMouse == 0){ cIn = -1; }
 		if(pc.xMouse == 5 && pc.yMouse == 0){ cIn = 1; }
 		
-		
-		
-		
-		
 		if(( pc.xMouse >= 1 && pc.xMouse <= 4) && pc.yMouse == 0){
 			var n = 0 + (pc.xMouse - 1) + lCursor;
 			if(pc.potionCursor == n){ 
@@ -36,14 +32,9 @@ if(state == "select"){
 				return;
 			} else {pc.potionCursor = n; }
 		}
-		
-		
-		
-		
-		
-		
-		
 	}
+	
+	if(pc.clickEnter){ state = "target"; return; }
 	
 	if(cIn != 0){
 		playerInputEatOK();
@@ -60,7 +51,21 @@ if(state == "select"){
 }
 
 if(state == "target"){
+	if(pc.xIn != 0 || pc.yIn != 0){
+		pc.potions[potIndex[pc.potionCursor]] -= 1;
+		potionThrow(pc.xIn, pc.yIn);
+		
+		playerInputEatOK();
+		instance_destroy();
+	}
 	
+	if(pc.clickNum != 0){
+		pc.potions[potIndex[pc.potionCursor]] -= 1;
+		potionDrink(pc.clickNum);
+		
+		playerInputEatOK();
+		instance_destroy();
+	}
 }
 
 

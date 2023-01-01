@@ -24,7 +24,9 @@ function playerGetInput(){
 	clickDown = yIn == 1 && ( keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down) );
 	
 	
-	clickOK = keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left);
+	//clickOK = keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left);
+	clickOK = mouse_check_button_pressed(mb_left);
+	clickEnter = keyboard_check_pressed(vk_enter);
 	holdOK = keyboard_check(vk_enter) || mouse_check_button(mb_left);
 	
 	clickNO = keyboard_check_pressed(vk_backspace) || mouse_check_button_pressed(mb_right);

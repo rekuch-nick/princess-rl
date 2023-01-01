@@ -1,0 +1,3 @@
+function potionThrow(xd, yd){
+
+}

@@ -21,6 +21,8 @@ if(state == "phase in"){
 	
 } else {
 	
+	if(instance_number(objScreenPotionBar) < 1){ instance_create_depth(x, y, depth, objScreenPotionBar); }
+	
 	playerInputActionSelect();
 	
 	

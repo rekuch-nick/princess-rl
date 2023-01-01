@@ -1,4 +1,6 @@
 event_inherited();
+debug = true;
+
 battleSpeed = 1;
 debugCombatLog = true;
 

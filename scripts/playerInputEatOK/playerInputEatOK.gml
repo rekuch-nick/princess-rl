@@ -1,5 +1,6 @@
 function playerInputEatOK(){
 	pc.clickOK = false;
+	pc.clickEnter = false;
 	pc.holdOK = false;
 	pc.inputCD = 10;
 	
