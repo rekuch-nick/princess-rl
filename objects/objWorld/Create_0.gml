@@ -1,5 +1,6 @@
 makeRoom = false;
 worldGenClear();
+
 seed = 1;
 
 draw_set_font(fntPlain);

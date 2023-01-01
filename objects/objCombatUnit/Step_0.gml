@@ -11,7 +11,7 @@ if(instance_number(objScreenCombat) == 1){
 
 
 if(state == "go"){
-	
+	room_speed = clamp(60 * pc.battleSpeed, 60, 90);
 	
 	//choose move
 	var act = getAction(actions[cursor]);
@@ -122,6 +122,7 @@ if(state == "go"){
 
 	
 } else if (state == "done"){
+	room_speed = 60 * pc.battleSpeed;
 	characterBuffDecay(id);
 	x = x1; y = y1;
 	

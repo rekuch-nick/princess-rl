@@ -51,3 +51,12 @@ if(clickPause){
 	playerInputEatOK();
 	instance_create_depth(0, 0, ww.layerS, objScreenStats);
 }
+
+
+if(clickQuaff || clickThrow){
+	playerInputEatOK();
+	instance_create_depth(0, 0, ww.layerS, objScreenPotionBar);
+}
+
+
+

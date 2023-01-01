@@ -7,6 +7,8 @@ turn = noone;
 
 room_speed = 60 * pc.battleSpeed;
 
+instance_create_depth(0, 0, depth - 1, objScreenPotionBar);
+
 with(objCombatUnit){
 	if(MC){
 		characterSetActions();

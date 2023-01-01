@@ -6,7 +6,8 @@ className = "Rogue";
 aly = 1;
 image_xscale = 4;
 
-fStriking = imgChar8Striking;
+fStriking = imgMCRogueStriking;
+fBackStrike = imgMCRogueBackstabing;
 
 statBase[ww.nSTR] = 13;
 statBase[ww.nINT] = 9;

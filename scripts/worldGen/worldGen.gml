@@ -6,6 +6,8 @@ function worldGen(){
 	random_set_seed(pc.stage * 1000 + seed);
 	
 	
+	
+	
 	worldGenClear();
 	
 	for(var a=0; a<15; a++){ for(var b=0; b<11; b++){
@@ -15,12 +17,20 @@ function worldGen(){
 	worldGenMazeFrom(0, 0);
 	
 	
+	worldGenReplaceRandomBlock(imgTileRock, imgTileChest, 2);
+	
+	
 	var n = clamp(50 - pc.stage * 2, 0, 50);
 	worldGenReplaceRandomBlock(imgTileRock, noone, n);
 	
+	spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1);
+	spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1);
+	spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1); spawnPotion(-1, -1, -1);
+	
+	
 	var spt = getFreeSpace(6);
 	var goal = spawnPup(objPupGoal, spt.a, spt.b);
-	//goal.respawns = 2;
+	goal.respawns = 1;
 	
 	
 	

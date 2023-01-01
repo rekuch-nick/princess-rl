@@ -20,6 +20,12 @@ function playerEnterTile(a, b){
 			if(pc.coins >= pc.coinsMax){ levelUp(); }
 		}
 		
+		if(p.potionIndex != -1){
+			pc.potions[p.potionIndex] ++;
+		}
+		
+		
+		
 		if(p.respawns > 1){
 			p.respawns --;
 			

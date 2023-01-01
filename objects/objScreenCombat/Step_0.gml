@@ -10,6 +10,9 @@ if(state == "phase in"){
 		
 		instance_destroy(ww.mmap[pc.xSpot, pc.ySpot]);
 		ww.mmap[pc.xSpot, pc.ySpot] = noone;
+		
+		with(objScreenPotionBar){ instance_destroy(); }
+		
 		instance_destroy();
 	}
 

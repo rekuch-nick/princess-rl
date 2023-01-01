@@ -6,7 +6,8 @@ depth = ww.layerM - 50;
 inputCD = 0;
 playerGetInput();
 checkTile = false;
-
+xDirHeld = 0;
+yDirHeld = 0;
 
 movePoints = 3;
 movePointMax = 3;
