@@ -53,16 +53,22 @@ if(state == "select"){
 if(state == "target"){
 	if(pc.xIn != 0 || pc.yIn != 0){
 		pc.potions[potIndex[pc.potionCursor]] -= 1;
-		potionThrow(pc.xIn, pc.yIn);
 		
+		potionThrow(getPotionName(potKind[pc.potionCursor]), pc.xIn, pc.yIn);
+		pc.potionKnown[potKind[pc.potionCursor]] = true;
+		if(pc.potions[potIndex[pc.potionCursor]] == 0){ pc.potionCursor = 0; }
+		draw = false;
 		playerInputEatOK();
 		instance_destroy();
 	}
 	
 	if(pc.clickNum != 0){
 		pc.potions[potIndex[pc.potionCursor]] -= 1;
-		potionDrink(pc.clickNum);
 		
+		potionDrink(getPotionName(potKind[pc.potionCursor]), pc.clickNum - 1);
+		pc.potionKnown[potKind[pc.potionCursor]] = true;
+		if(pc.potions[potIndex[pc.potionCursor]] == 0){ pc.potionCursor = 0; }
+		draw = false;
 		playerInputEatOK();
 		instance_destroy();
 	}

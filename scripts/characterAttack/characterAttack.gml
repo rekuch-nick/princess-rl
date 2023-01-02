@@ -32,8 +32,12 @@ function characterAttack(c1, c2, atk){
 	
 	if(pc.debugCombatLog){ show_debug_message( string(c1.className) + " hit " + string(c2.className) + " for " + string(damRoll) ) }
 	
+	if(atk.heals){ damRoll *= -1; } else {
+		if(c1.item[0] != noone){ damRoll += power(c1.item[0], 2); }
+		if(c2.item[1] != noone){ damRoll = clamp(damRoll - power(c2.item[1], 2), 0, damRoll); }
+	}
 	
-	if(atk.heals){ damRoll *= -1; }
+	
 	c2.hp = clamp(c2.hp - damRoll, 0, hpMax(c2));
 	
 	

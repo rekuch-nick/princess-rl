@@ -9,6 +9,7 @@ function worldGenClear(){
 		bmap[a, b] = noone;
 		pmap[a, b] = noone;
 		mmap[a, b] = noone;
+		rmap[a, b] = irandom_range(1, 1000);
 	}}
 	
 	

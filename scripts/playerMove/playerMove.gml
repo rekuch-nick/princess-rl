@@ -6,6 +6,16 @@ function playerMove(a, b){
 	
 	if(ww.bmap[pc.xSpot + a, pc.ySpot + b] != noone){
 		canMove = false;
+		
+		if(ww.bmap[pc.xSpot + a, pc.ySpot + b].sprite_index == imgTileChest){
+			if(pc.keys > 0){
+				keys --;
+				characterShiftTowards(pc, pc.xSpot + a, pc.ySpot + b);
+				openChest(pc.xSpot + a, pc.ySpot + b);
+			}
+		}
+		
+		
 	}
 	
 	

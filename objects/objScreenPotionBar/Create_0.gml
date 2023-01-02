@@ -21,6 +21,7 @@ if(potMax == 0){
 	instance_destroy();
 }
 
-lCursor = 0;
+if(pc.potionCursor >= ww.potMax){ pc.potionCursor = 0; }
 
+lCursor = 0;
 while(lCursor < pc.potionCursor - 3){ lCursor ++; }

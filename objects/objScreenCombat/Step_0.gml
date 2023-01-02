@@ -17,11 +17,13 @@ if(state == "phase in"){
 	}
 
 } else if (state == "acting"){
+	if(instance_number(objScreenPotionBar) < 1){ 
+		instance_create_depth(x, y, depth-1, objScreenPotionBar); }
 	playerInputActionSelect();
 	
 } else {
-	
-	if(instance_number(objScreenPotionBar) < 1){ instance_create_depth(x, y, depth, objScreenPotionBar); }
+	if(instance_number(objScreenPotionBar) < 1){ 
+		instance_create_depth(x, y, depth-1, objScreenPotionBar); }
 	
 	playerInputActionSelect();
 	

@@ -34,10 +34,10 @@ if(instance_number(objScreenCombat) == 1 && image_alpha >= 1){
 	if(MC && hp > 0){
 	
 		for(var i=0; i<array_length(actions); i++){
-			var b = y1;
+			var b = y1 + 128;
 			var a = i * 64;
 			
-			while(a > 2 * 64){ a -= 3 * 64; b += 64; }
+			while(a > 2 * 64){ a -= 3 * 64; b -= 64; }
 			
 			draw_sprite_stretched(getAction(actions[i]).icon, 0, a, b, 64, 64);
 			

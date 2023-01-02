@@ -1,7 +1,7 @@
 image_xscale = 4; image_yscale = 4;
 
 xSpeed = 0;
-ySpeed = -1;
+ySpeed = -.5;
 grav = 0;
 
 rot = 0;

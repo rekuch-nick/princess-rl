@@ -1,4 +1,7 @@
 if(!draw){ return; }
+
+
+
 draw_self();
 
 

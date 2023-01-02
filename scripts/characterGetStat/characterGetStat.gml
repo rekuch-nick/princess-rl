@@ -8,6 +8,8 @@ function characterGetStat(c, sid){
 	//apply gear
 	
 	//apply buffs
+	if(sid == ww.nSPD && characterHasBuff(c, "Haste")){ n *= 1.2; }
+	if(sid == ww.nSPD && characterHasBuff(c, "Slow")){ n *= .8; }
 	
 	//if(sid == ww.nSTR){ n ++; }
 	

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "spawnCoin",
+  "name": "arrayContainsString",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

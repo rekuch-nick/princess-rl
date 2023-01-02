@@ -1,7 +1,24 @@
 function getItem(n){
 	
 	
-	if(n == "Mundane Sword"){
+	
+	if(n == "Sword"){
+		return {
+			nam: n,
+			img: imgSword,
+			slot: 0,
+			bonus: 0,
+			col: c_grey,
+			stat: -1,
+			statScale: 1,
+			statTxt: "DMG +0",
+			prop: "",
+			propScale: 1,
+		};
+	}
+	
+	
+	if(n == "Old Sword"){
 		return {
 			nam: n,
 			img: imgCommonSword,
@@ -10,13 +27,13 @@ function getItem(n){
 			col: c_grey,
 			stat: -1,
 			statScale: 1,
-			statTxt: "No Bonus",
-			prop: "No Proc",
+			statTxt: "DMG +0",
+			prop: "",
 			propScale: 1,
 		};
 	}
 	
-	if(n == "Mundane Armor"){
+	if(n == "Old Armor"){
 		return {
 			nam: n,
 			img: imgCommonArmor,
@@ -25,13 +42,13 @@ function getItem(n){
 			col: c_grey,
 			stat: ww.nDEF,
 			statScale: 1,
-			statTxt: "DEF + 0",
+			statTxt: "DEF +0",
 			prop: "",
 			propScale: 1,
 		};
 	}
 	
-	if(n == "Mundane Ring"){
+	if(n == "Old Ring"){
 		return {
 			nam: n,
 			img: imgCommonRing,

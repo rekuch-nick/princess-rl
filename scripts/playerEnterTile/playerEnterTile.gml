@@ -3,13 +3,11 @@ function playerEnterTile(a, b){
 	
 	var m = ww.mmap[a, b];
 	if(m != noone){
-		
 		instance_create_depth(0, 0, ww.layerS, objScreenCombat);
 		spawnCombatMobs(m.sprite_index);
+		mobInitBuffs(m.buffsToGain);
 		
 	}
-	
-	
 	
 	
 	var p = ww.pmap[a, b];
@@ -39,9 +37,9 @@ function playerEnterTile(a, b){
 				ww.pmap[a, b] = noone;
 				ww.pmap[spt.a, spt.b] = p;
 				
-				spawnCoin();
-				spawnCoin();
-				spawnCoin();
+				spawnListTreasure();
+				spawnListTreasure();
+				spawnListTreasure();
 				
 				
 			}
@@ -49,7 +47,11 @@ function playerEnterTile(a, b){
 		
 		} else if(p.respawns == 1) {
 			ww.makeRoom = true;
-			
+		
+		} else if(p.object_index == objPupGear){
+			var scr = instance_create_depth(0, 0, ww.layerS, objScreenEquip);
+			scr.itm = p.itm;
+		
 		} else {
 			
 			
